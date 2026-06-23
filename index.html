@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT MOTOR TOUR</title>
+
+    <style>
+        *{
+            margin: 0; /* 모든 태그의 바깥 여백 제거*/
+            padding: 0; /*모든 태그의 안쪽 여백 제거*/
+            box-sizing: border-box; /* 크기 계산을 쉽게 해줌*/
+        }
+
+        body{
+            font-family: "Noto Sans KR", sans-serif; /*사이트 전체 글꼴*/
+            background-color: white; /*배경색 흰색*/
+            color: #111; /* 기본 글자 색 */
+        }
+
+        ul, li{
+            list-style: none; /* 리스트 점(●) 재거 */ 
+        }
+
+        a{
+            text-decoration: none; /* 밑줄 제거 */
+            color: inherit; /* 부모 글자색 그대로 사용 */
+        }
+
+        .navbar{
+            width: 100%; /* 화면 전체 너비*/
+            height: 150px; /*높이 150px*/
+            padding: 0 55px; /* 좌우 여백 55px */ 
+
+            display: flex; /* 가로 정렬 기능 사용 */
+            justify-content: space-between; 
+            align-items: center; /*세로 가운데 정렬 */ 
+
+            background-color: white; /* 배경색 흰색 */
+            position: relative; /* 기준 위치 설정 */
+            z-index: 100; /* 다른 요소보다 위에 표시 */ 
+        }
+
+        .logo{
+            font-size: 24px; /* 글자 크기 */
+            font-weight: bold; /* 굵게 */
+            letter-spacing: 2px; /* 글자 간격 */
+        }
+
+        .logo img{
+            height: 80px; /* 로고 높이 */ 
+        } 
+        
+        .menu{
+            display: flex; /* 메뉴를 가로로 배치 */ 
+            gap: 35px; /* 메뉴 사이 간격 */ 
+            font-size: 14px; /* 글자 크기 */
+            font-weight: bold; /* 글자 굵게 */ 
+        }
+
+        .menu li{
+            padding: 20px 30px;
+            transition: 0.3s; /* 변화 효과를 0.3초 동안 */
+        }
+
+        .menu li:hover{
+            background-color: black;
+            color: white;
+        }
+        .hero{
+            height: calc(100vh - 150px);
+
+            display: flex; /* 정렬기능 사용 */
+            flex-direction: column; /* column = 세로 / 세로로 쌓아라 */ 
+
+            justify-content: center; /* 위아래 가운데 정렬 */ 
+            align-items: center; /*좌우 가운데 정렬*/
+
+            padding-top: 180px; /* 위쪽 공간 추가 */ 
+
+            background-image: url("./public/main11.jpg"); /* 배경 이미지 */
+
+            background-size: cover; /*사진이 공간을 꽉 채우도록 확대 */ 
+            background-position: center; /* 이미지 중앙 배치 */ 
+        }
+
+        .hero h1{
+            font-size: 60px; /* 글자 크기 */ 
+            letter-spacing: 2px; /*글자 사이의 간격*/
+
+            text-shadow: 2px 2px 6px black; /*text-shadow = 글자 그림자*/
+
+        }
+
+        .hero p{
+            margin-top: 20px; /*바깥 여백(위쪽 공간)*/
+            margin-bottom: 50px; /*바깥 여백(아래쪽 공간)*/
+            font-size: 25px; /* 글자 크기 */
+            line-height: 1.7; /* 줄 간격 */ 
+            text-shadow: 2px 2px 10px black; /*그림자*/
+        }
+
+        .hero button{
+            width: 650px; /*버튼 가로 길이*/
+            height: 50px; /*버튼 세로 길이*/
+            justify-content: space-between;
+            display: flex; /* 가로 정렬 기능 */ 
+            align-items: center;
+            padding: 0 30px;
+            background-color: transparent; /* 배경색 투명*/
+
+            color: white; /* 글자 흰색 */
+
+            border: 2px solid white; /*테두리*/
+
+            font-size: 16px; /* 글자 크기 */ 
+
+            cursor: pointer; /*마우스를 올리면 손가락 모양으로 바꿔라*/
+
+            transition: 0.3s; /* 변화가 0.3초 동안 부드럽게 일어나게 해라*/
+
+            text-align : left;
+
+        }
+
+        .hero button:hover{ /*마우스를 올렸을 때 색이 바뀌어라*/
+
+            background-color: red; /* 배경 빨간색 */
+            color: white; /* 글자 흰색 */ 
+
+        }
+
+        .button-box{
+            
+            display: flex; 
+            flex-direction: column;
+            gap: 20px; /*버튼 사이를 20px 띄워라*/
+            margin-top: 5px;
+
+        }
+
+        
+            
+
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./public/logo.png" alt=""></div>
+        <ul class="menu">
+            <li>Promotion</li>
+            <li>Company</li>
+            <li>Tour</li>
+            <li>Curator/Private</li>
+            <li>Information</li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+     
+       
+
+        <div class="button-box">
+            <button>
+                <span>포르쉐 드라이빙 익스피리언스</span>
+                <span>›</span> 
+            </button>
+            
+            <button>
+                <span>그랑프리 투어</span>
+                <span>›</span>
+            </button>
+        </div>
+    </header>
+    
+  
+        
+  
+</body>
+</html>
